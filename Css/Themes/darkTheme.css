@@ -1,0 +1,33 @@
+:root {
+    /* --- DARK THEME COLORS (Midnight Sky) --- */
+    --color-bg-main: #0A0F1A;
+    /* Very dark blue-black background */
+    --color-surface: #111827;
+    /* Dark navy for cards & nav */
+    --color-primary: #020617;
+    /* Deepest navy for header/footer */
+    --color-secondary: #3B82F6;
+    /* Bright aviation blue for buttons */
+    --color-accent: #F59E0B;
+    /* Amber for alerts & highlights */
+    /* --- BORDERS & TEXT --- */
+    --color-border: #1F2937;
+    /* Dark gray-blue border */
+    --text-main: #F3F4F6;
+    /* Off-white for main text */
+    --text-muted: #9CA3AF;
+    /* Soft gray for labels */
+    --text-on-dark: #FFFFFF;
+    /* Pure white text */
+    /* --- STATUS --- */
+    --status-success: #10B981;
+    /* Emerald green */
+    --status-danger: #EF4444;
+    /* Bright red */
+    --status-warning: #F59E0B;
+    /* Amber */
+    /* --- UI CONSTANTS --- */
+    --radius-md: 10px;
+    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --transition: 0.2s ease-in-out;
+}

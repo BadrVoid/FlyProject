@@ -1,0 +1,235 @@
+/* Header Styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* Logo */
+
+.logo p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--color-secondary);
+}
+
+
+/* Navigation */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color var(--transition);
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: width var(--transition);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Header Actions */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* Theme Toggle Button */
+
+.theme-btn {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--text-main);
+    font-size: 18px;
+    transition: all var(--transition);
+}
+
+.theme-btn:hover {
+    background: var(--color-secondary);
+    color: white;
+    transform: rotate(15deg);
+}
+
+
+/* Profile Button (Simple Link) */
+
+.profile-btn {
+    background: var(--color-secondary);
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.profile-btn i {
+    font-size: 18px;
+}
+
+.profile-btn:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+
+/* Footer Styles */
+
+.simple-footer {
+    background-color: var(--color-primary);
+    color: var(--text-on-dark);
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-col h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-col h3 span {
+    color: var(--color-secondary);
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+.footer-col p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition);
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-secondary);
+}
+
+.contact-list li {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-list li i {
+    width: 20px;
+    color: var(--color-secondary);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+    transition: all var(--transition);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    border-top: 1px solid var(--color-border);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: 13px;
+}
