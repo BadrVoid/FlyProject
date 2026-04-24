@@ -19,23 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 3. THEME SWITCHER ---
     const themeBtn = document.querySelector(".theme-btn");
     const themeLink = document.querySelector("#theme-style");
-    const icon = themeBtn?.querySelector("i");
+    const icon = themeBtn ? themeBtn.querySelector("i") : null;
+
+    // Detect the correct base path
+    const isRoot = !window.location.pathname.includes("/Pages/");
+    const basePath = isRoot ? "Css/Themes/" : "../Css/Themes/";
 
     // Apply saved theme immediately on load
     const savedTheme = localStorage.getItem("userTheme");
     if (savedTheme === "dark") {
-        themeLink.href = "../Css/Themes/darkTheme.css";
+        themeLink.href = basePath + "darkTheme.css";
         if (icon) icon.className = "fas fa-sun";
     }
 
     if (themeBtn) {
         themeBtn.addEventListener("click", () => {
             if (themeLink.href.includes("lightTheme.css")) {
-                themeLink.href = "../Css/Themes/darkTheme.css";
+                themeLink.href = basePath + "darkTheme.css";
                 if (icon) icon.className = "fas fa-sun";
                 localStorage.setItem("userTheme", "dark");
             } else {
-                themeLink.href = "../Css/Themes/lightTheme.css";
+                themeLink.href = basePath + "lightTheme.css";
                 if (icon) icon.className = "fas fa-moon";
                 localStorage.setItem("userTheme", "light");
             }
