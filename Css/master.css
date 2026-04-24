@@ -1,4 +1,15 @@
-/* Header Styles */
+@import url(../Css/Themes/lightTheme.css);
+@import url(../Css/Themes/darkTheme.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/**********************************
+            Header Styles
+ **********************************/
 
 header {
     display: flex;
@@ -123,13 +134,341 @@ nav ul li a:hover::after {
 }
 
 
-/* Footer Styles */
+/**********************************
+            Profile Styles
+ **********************************/
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url(../Imgs/19.jpg) center / cover no-repeat;
+}
+
+.profilemain {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow-soft);
+    padding: 40px;
+    border-radius: 70px 40px;
+}
+
+.profileheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileheader .btn-primary {
+    border-radius: 12px;
+    padding: 10px 25px;
+}
+
+.profileheader .identity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profileheader .identity .identitle p {
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profileheader .identity .idenimg .proimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-border);
+}
+
+.profilecards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+.profilecards .profcard {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profcard:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.profcard p:first-of-type {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.profcard p:last-of-type {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.upcoming-booking h3,
+.documents-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-on-dark);
+}
+
+.booking-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.booking-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.route {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.route i {
+    font-size: 1rem;
+    margin: 0 10px;
+    color: var(--color-border);
+}
+
+.details {
+    color: var(--text-muted);
+}
+
+.btn-checkin {
+    background: white;
+    color: var(--color-primary);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-checkin:hover {
+    background: var(--color-border);
+    transform: scale(1.02);
+    color: var(--text-main);
+}
+
+.documents-section {
+    margin-top: 30px;
+}
+
+.doc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.doc-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-icon {
+    color: var(--status-success);
+    font-size: 1.3rem;
+}
+
+
+/**********************************
+        SignIn & CreateAcc Styles
+ **********************************/
+
+
+/* 1. Page Layout */
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: url(../Imgs/19.jpg) center / cover no-repeat;
+    min-height: 100vh;
+}
+
+
+/* 2. The Main Glossy Card */
+
+.signin-card {
+    background-color: var(--color-primary);
+    color: var(--text-on-dark);
+    width: 100%;
+    max-width: 420px;
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.signin-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.signin-header p {
+    font-size: 0.9rem;
+    color: var(--text-on-dark);
+    margin-bottom: 30px;
+}
+
+
+/* 3. Custom Form Inputs */
+
+.input-group-custom {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group-custom label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--text-on-dark);
+    opacity: 0.9;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: var(--text-muted);
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--text-on-dark);
+    outline: none;
+    transition: var(--transition);
+}
+
+.input-wrapper input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* 5. The Login Button */
+
+.btn-signin {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--color-secondary);
+    color: var(--text-on-dark);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-signin:hover {
+    background-color: #3694bc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.signin-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--color-border);
+}
+
+.signin-footer a {
+    color: var(--text-on-dark);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.signin-footer a:hover {
+    color: var(--color-accent);
+}
+
+
+/**********************************
+            Footer Styles
+ **********************************/
 
 .simple-footer {
     background-color: var(--color-primary);
     color: var(--text-on-dark);
     padding: 50px 0 20px;
-    margin-top: 60px;
 }
 
 .footer-grid {
