@@ -72,8 +72,14 @@ nav ul li a::after {
     transition: width var(--transition);
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
     width: 100%;
+}
+
+nav ul li a.active {
+    color: var(--color-secondary);
+    font-weight: bold;
 }
 
 

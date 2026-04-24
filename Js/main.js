@@ -1,43 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // --- 1. CONFIGURATION & CONSTANTS ---
+    const isSigned = localStorage.getItem("signedIn");
+    const currentPage = window.location.pathname;
 
-    // --- 1. Theme Switcher ---
-    // 1. Select the button and the stylesheet link
+    // --- 2. SECURITY & REDIRECT GUARDS ---
+    // If logged in, don't let them go back to Sign-In/Sign-Up
+    if (isSigned === "true" && (currentPage.includes("signIn.html") || currentPage.includes("signUp.html"))) {
+        window.location.href = "../Pages/profile.html";
+        return;
+    }
+
+    // If NOT logged in, don't let them see the Profile page
+    if (currentPage.includes("profile.html") && isSigned !== "true") {
+        window.location.href = "../Pages/signIn.html";
+        return;
+    }
+
+    // --- 3. THEME SWITCHER ---
     const themeBtn = document.querySelector(".theme-btn");
     const themeLink = document.querySelector("#theme-style");
-    const icon = themeBtn.querySelector("i");
+    const icon = themeBtn?.querySelector("i");
 
-    // 1. Check for saved theme in localStorage
+    // Apply saved theme immediately on load
     const savedTheme = localStorage.getItem("userTheme");
-
-    // 2. Apply the saved theme immediately on page load
     if (savedTheme === "dark") {
         themeLink.href = "../Css/Themes/darkTheme.css";
         if (icon) icon.className = "fas fa-sun";
-    } else {
-        themeLink.href = "../Css/Themes/lightTheme.css";
-        if (icon) icon.className = "fas fa-moon";
     }
 
-    // 3. Toggle and Save on click
-    themeBtn.addEventListener("click", () => {
-        // If current link is light, switch to dark
-        if (themeLink.href.includes("lightTheme.css")) {
-            themeLink.href = "../Css/Themes/darkTheme.css";
-            if (icon) icon.className = "fas fa-sun";
-            localStorage.setItem("userTheme", "dark");
-        } else {
-            themeLink.href = "../Css/Themes/lightTheme.css";
-            if (icon) icon.className = "fas fa-moon";
-            localStorage.setItem("userTheme", "light");
-        }
-    });
+    if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+            if (themeLink.href.includes("lightTheme.css")) {
+                themeLink.href = "../Css/Themes/darkTheme.css";
+                if (icon) icon.className = "fas fa-sun";
+                localStorage.setItem("userTheme", "dark");
+            } else {
+                themeLink.href = "../Css/Themes/lightTheme.css";
+                if (icon) icon.className = "fas fa-moon";
+                localStorage.setItem("userTheme", "light");
+            }
+        });
+    }
 
-    // --- 2. SIGN IN LOGIC ---
+    // --- 4. SIGN IN LOGIC ---
     const signInForm = document.querySelector(".signin-form");
     if (signInForm) {
         signInForm.addEventListener("submit", (event) => {
             event.preventDefault();
-
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
@@ -46,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.innerText = "Connecting...";
                 btn.style.opacity = "0.7";
 
+                // Save name from email prefix
+                const username = email.split("@")[0];
+                localStorage.setItem("userDisplayName", username);
+                localStorage.setItem("signedIn", "true");
+
                 setTimeout(() => {
                     window.location.href = "../Pages/profile.html";
                 }, 1000);
@@ -53,24 +67,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 3. SIGN UP LOGIC ---
+    // --- 5. SIGN UP LOGIC ---
     const signUpForm = document.querySelector(".signup-form");
     if (signUpForm) {
         signUpForm.addEventListener("submit", (e) => {
             e.preventDefault();
-
-            const createBtn = document.getElementById("createAccBtn");
             const nameInput = document.getElementById("fullname");
-
+            const createBtn = document.getElementById("createAccBtn");
             const name = nameInput.value;
+
             createBtn.innerText = "Creating Account...";
             createBtn.style.opacity = "0.7";
-            createBtn.style.cursor = "not-allowed";
+
+            // Save full name
+            localStorage.setItem("userDisplayName", name);
+            localStorage.setItem("signedIn", "true");
 
             setTimeout(() => {
                 alert(`Welcome aboard, ${name}! Your account has been created.`);
                 window.location.href = "../Pages/profile.html";
             }, 1500);
+        });
+    }
+
+    // --- 6. PROFILE DISPLAY & LOGOUT ---
+    const profName = document.querySelector(".ProName");
+    if (profName && isSigned === "true") {
+        const savedName = localStorage.getItem("userDisplayName");
+        profName.textContent = savedName.charAt(0).toUpperCase() + savedName.slice(1);
+    }
+
+    const logoutBtn = document.querySelector(".logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("signedIn");
+            localStorage.removeItem("userDisplayName");
+            window.location.href = "../Pages/signIn.html";
         });
     }
 });
