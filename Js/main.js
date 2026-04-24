@@ -109,4 +109,24 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "../Pages/signIn.html";
         });
     }
+
+    // --- 7. Buy-btn Logic ---
+    // Select ALL buttons with the class .btn-buy
+    const buyButtons = document.querySelectorAll(".btn-buy");
+
+    buyButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const isSigned = localStorage.getItem("signedIn");
+
+            if (isSigned === "true") {
+                // User is signed in
+                window.location.href = "../Pages/paymentMethod.html";
+            } else {
+                // User is not signed in
+                alert("Please sign in to continue with your purchase.");
+                window.location.href = "../Pages/signIn.html";
+            }
+        });
+    });
+
 });

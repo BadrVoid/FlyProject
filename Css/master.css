@@ -62,7 +62,7 @@ nav ul li a:hover {
 }
 
 nav ul li a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -151,6 +151,154 @@ nav ul li a.active {
 
 
 /**********************************
+        Boarding Styles
+ **********************************/
+
+.booking-container {
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../Imgs/16.jpg") center / cover no-repeat;
+}
+
+.booking-header {
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.booking-header h1 {
+    color: var(--text-main);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.booking-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+/* --- INDIVIDUAL TICKET CARD --- */
+
+.ticket-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 50px 30px;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Hover Effects */
+
+.ticket-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--color-secondary);
+}
+
+.ticket-card.featured::before {
+    content: "MOST PURCHASED";
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 5px 40px;
+    transform: rotate(-45deg);
+}
+
+
+/* --- CARD CONTENT STYLES --- */
+
+.ticket-type {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ticket-price {
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.ticket-price .currency {
+    font-size: 2.5rem;
+}
+
+.ticket-price .amount {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.ticket-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    text-align: left;
+    border-top: 1px solid var(--color-border);
+    padding-top: 30px;
+}
+
+.ticket-features li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.ticket-features i {
+    width: 15px;
+    font-size: 1rem;
+}
+
+.ticket-features .fa-check {
+    color: var(--status-success);
+}
+
+.ticket-features .fa-times {
+    color: var(--status-danger);
+}
+
+.btn-buy {
+    background-color: var(--color-secondary);
+    color: var(--text-on-dark);
+    border: none;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.btn-buy:hover {
+    background-color: var(--color-accent);
+}
+
+
+/**********************************
             Profile Styles
  **********************************/
 
@@ -191,7 +339,7 @@ nav ul li a.active {
 
 .profileheader .identity .identitle p {
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .profileheader .identity .idenimg .proimg {
@@ -359,7 +507,7 @@ nav ul li a.active {
 }
 
 .signin-header h2 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     font-style: italic;
     font-size: 2.2rem;
     margin-bottom: 10px;
