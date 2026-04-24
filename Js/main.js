@@ -1,6 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // --- 1. SIGN IN LOGIC ---
+    // --- 1. Theme Switcher ---
+    // 1. Select the button and the stylesheet link
+    const themeBtn = document.querySelector(".theme-btn");
+    const themeLink = document.querySelector("#theme-style");
+    const icon = themeBtn.querySelector("i");
+
+    // 1. Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem("userTheme");
+
+    // 2. Apply the saved theme immediately on page load
+    if (savedTheme === "dark") {
+        themeLink.href = "../Css/Themes/darkTheme.css";
+        if (icon) icon.className = "fas fa-sun";
+    } else {
+        themeLink.href = "../Css/Themes/lightTheme.css";
+        if (icon) icon.className = "fas fa-moon";
+    }
+
+    // 3. Toggle and Save on click
+    themeBtn.addEventListener("click", () => {
+        // If current link is light, switch to dark
+        if (themeLink.href.includes("lightTheme.css")) {
+            themeLink.href = "../Css/Themes/darkTheme.css";
+            if (icon) icon.className = "fas fa-sun";
+            localStorage.setItem("userTheme", "dark");
+        } else {
+            themeLink.href = "../Css/Themes/lightTheme.css";
+            if (icon) icon.className = "fas fa-moon";
+            localStorage.setItem("userTheme", "light");
+        }
+    });
+
+    // --- 2. SIGN IN LOGIC ---
     const signInForm = document.querySelector(".signin-form");
     if (signInForm) {
         console.log("Sign-in form active");
@@ -22,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 2. SIGN UP LOGIC ---
+    // --- 3. SIGN UP LOGIC ---
     const signUpForm = document.querySelector(".signup-form");
     if (signUpForm) {
         console.log("Sign-up form active");

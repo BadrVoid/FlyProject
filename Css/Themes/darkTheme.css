@@ -1,33 +1,33 @@
 :root {
     /* --- DARK THEME COLORS (Midnight Sky) --- */
-    --color-bg-main: #0A0F1A;
-    /* Very dark blue-black background */
-    --color-surface: #111827;
-    /* Dark navy for cards & nav */
+    --color-bg-main: #0B1120;
+    /* Slightly deeper blue-tinted black */
+    --color-surface: #1E293B;
+    /* Lighter navy to create "elevation" for cards */
     --color-primary: #020617;
     /* Deepest navy for header/footer */
-    --color-secondary: #3B82F6;
-    /* Bright aviation blue for buttons */
-    --color-accent: #F59E0B;
-    /* Amber for alerts & highlights */
+    /* Aviation Blue: Shifted to a slightly more "neon/glass" blue */
+    --color-secondary: #60A5FA;
+    /* Amber Accent: Warm gold for that "cockpit lights" feel */
+    --color-accent: #FBBF24;
     /* --- BORDERS & TEXT --- */
-    --color-border: #1F2937;
-    /* Dark gray-blue border */
-    --text-main: #F3F4F6;
-    /* Off-white for main text */
-    --text-muted: #9CA3AF;
-    /* Soft gray for labels */
+    --color-border: rgba(255, 255, 255, 0.1);
+    /* Transparent borders look better on dark mode */
+    --text-main: #E5E7EB;
+    /* Easier on the eyes than pure white */
+    --text-muted: #94A3B8;
+    /* Slate gray for secondary info */
     --text-on-dark: #FFFFFF;
-    /* Pure white text */
     /* --- STATUS --- */
-    --status-success: #10B981;
-    /* Emerald green */
-    --status-danger: #EF4444;
-    /* Bright red */
-    --status-warning: #F59E0B;
-    /* Amber */
+    --status-success: #34D399;
+    /* Brighter for dark background visibility */
+    --status-danger: #F87171;
+    /* Softened red to avoid "bleeding" */
+    --status-warning: #FBBF24;
     /* --- UI CONSTANTS --- */
-    --radius-md: 10px;
-    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.4);
-    --transition: 0.2s ease-in-out;
+    --radius-md: 12px;
+    /* Slightly rounder for a modern look */
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smoother animation */
 }

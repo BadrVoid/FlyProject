@@ -135,6 +135,16 @@ nav ul li a:hover::after {
 
 
 /**********************************
+        Home Styles
+ **********************************/
+
+.homecontent {
+    background: url(../Imgs/24.jpg) center / cover no-repeat;
+    height: 100vh;
+}
+
+
+/**********************************
             Profile Styles
  **********************************/
 
