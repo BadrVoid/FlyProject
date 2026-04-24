@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 2. SIGN IN LOGIC ---
     const signInForm = document.querySelector(".signin-form");
     if (signInForm) {
-        console.log("Sign-in form active");
         signInForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 3. SIGN UP LOGIC ---
     const signUpForm = document.querySelector(".signup-form");
     if (signUpForm) {
-        console.log("Sign-up form active");
         signUpForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
