@@ -176,7 +176,7 @@ nav ul li a.active {
 }
 
 .booking-header p {
-    color: var(--text-muted);
+    color: var(--text-on-dark);
     font-size: 1.1rem;
 }
 
@@ -610,7 +610,7 @@ nav ul li a.active {
 .signin-footer {
     margin-top: 25px;
     font-size: 0.9rem;
-    color: var(--color-border);
+    color: var(--text-muted);
 }
 
 .signin-footer a {
