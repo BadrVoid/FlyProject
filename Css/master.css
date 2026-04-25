@@ -145,8 +145,178 @@ nav ul li a.active {
  **********************************/
 
 .homecontent {
-    background: url(../Imgs/24.jpg) center / cover no-repeat;
+    background: url("../Imgs/home.jpg") center/cover no-repeat fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    height: 100%;
+    width: 100%;
+    background: url("../Imgs/home.jpg") center/cover no-repeat fixed;
     height: 100vh;
+}
+
+.overlay {
+    background: linear-gradient( to right, rgba(8, 39, 80, 0.8), rgba(8, 39, 80, 0.4));
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: var(--text-on-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-text h1 span {
+    color: var(--color-accent);
+}
+
+.hero-text p {
+    color: var(--text-on-dark);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-surface);
+    transform: translateY(-3px);
+}
+
+
+/* --- STATS SECTION --- */
+
+.stats-section {
+    margin-top: -60px;
+    position: relative;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--color-surface);
+    padding: 40px 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border-top: 5px solid var(--color-secondary);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--color-accent);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.why-us {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.header-line {
+    width: 120px;
+    height: 4px;
+    background: var(--color-accent);
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-box {
+    background: var(--color-surface);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.feature-box:hover {
+    background: var(--color-surface);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-soft);
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: var(--color-secondary);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 
