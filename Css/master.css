@@ -171,7 +171,7 @@ nav ul li a.active {
 }
 
 .hero-text {
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
@@ -413,15 +413,15 @@ nav ul li a.active {
 }
 
 .ticket-card.firstone {
-    animation: faderight 1s ease forwards;
+    animation: faderight 1s ease;
 }
 
 .ticket-card.secondone {
-    animation: fadeup 1s ease forwards;
+    animation: fadeup 1s ease;
 }
 
 .ticket-card.thirdone {
-    animation: fadeleft 1s ease forwards;
+    animation: fadeleft 1s ease;
 }
 
 
@@ -550,7 +550,7 @@ nav ul li a.active {
 }
 
 .profilemain {
-    animation: fadeup 1s ease-in-out forwards;
+    animation: fadeup 1s ease-in-out;
     margin: 50px auto;
     width: 90%;
     max-width: 700px;
@@ -737,7 +737,7 @@ nav ul li a.active {
 /* 2. The Main Glossy Card */
 
 .signin-card {
-    animation: fadeup 1s ease forwards;
+    animation: fadeup 1s ease;
     margin-left: 60px;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(18px);
@@ -883,6 +883,147 @@ nav ul li a.active {
 .signin-footer a:hover {
     color: var(--color-accent);
 }
+
+
+/**********************************
+            Support Styles
+ **********************************/
+
+
+/* Feedback Form Styles */
+
+.support {
+    background: url("../Imgs/37.jpg") center / cover no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Glass card */
+
+.feedback-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    padding: 40px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 30px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    animation: fadeup 0.5s ease;
+}
+
+
+/* Form layout */
+
+.feedback-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+
+.feedback-form label {
+    font-weight: 600;
+    color: var(--text-on-dark);
+    font-size: 14px;
+}
+
+.feedback-form .feedback-input,
+.feedback-form .feedback-textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+    font-size: 15px;
+    background: var(--color-surface);
+    color: var(--text-main);
+    transition: all var(--transition);
+}
+
+.feedback-form .feedback-input::placeholder,
+.feedback-form .feedback-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.feedback-form .feedback-input:focus,
+.feedback-form .feedback-textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px rgba(44, 125, 160, 0.2);
+}
+
+
+/* Textarea */
+
+.feedback-form .feedback-textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 250px;
+}
+
+
+/* Checkbox */
+
+.feedback-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    font-size: 13px;
+    color: var(--text-on-dark);
+}
+
+.feedback-form .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-secondary);
+}
+
+.feedback-form .checkbox-group span {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+
+/* Button */
+
+.send-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-secondary);
+    color: var(--text-on-dark);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+
+/* Hover */
+
+.send-btn:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+
+/* Click */
+
+.send-btn:active {
+    transform: scale(0.98);
+}
+
+
+/*end of style support-feedback page*/
 
 
 /**********************************
