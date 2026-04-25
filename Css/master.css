@@ -170,6 +170,21 @@ nav ul li a.active {
     align-items: center;
 }
 
+.hero-text {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatex(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
 .hero-text h1 {
     font-size: 4rem;
     color: var(--text-on-dark);
@@ -397,6 +412,60 @@ nav ul li a.active {
     transform: rotate(-45deg);
 }
 
+.ticket-card.firstone {
+    animation: faderight 1s ease forwards;
+}
+
+.ticket-card.secondone {
+    animation: fadeup 1s ease forwards;
+}
+
+.ticket-card.thirdone {
+    animation: fadeleft 1s ease forwards;
+}
+
+
+/* from LEFT → to center */
+
+@keyframes faderight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* from BOTTOM → to center */
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* from RIGHT → to center */
+
+@keyframes fadeleft {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 /* --- CARD CONTENT STYLES --- */
 
@@ -477,14 +546,16 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     color: white;
-    background: url(../Imgs/19.jpg) center / cover no-repeat;
+    background: url(../Imgs/34.jpg) center / cover no-repeat;
 }
 
 .profilemain {
+    animation: fadeup 1s ease-in-out forwards;
     margin: 50px auto;
     width: 90%;
     max-width: 700px;
-    background-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
     box-shadow: var(--shadow-soft);
     padding: 40px;
     border-radius: 70px 40px;
@@ -655,10 +726,10 @@ nav ul li a.active {
 
 .signin-container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 20px;
-    background: url(../Imgs/19.jpg) center / cover no-repeat;
+    background: url(../Imgs/34.jpg) center / cover no-repeat;
     min-height: 100vh;
 }
 
@@ -666,7 +737,10 @@ nav ul li a.active {
 /* 2. The Main Glossy Card */
 
 .signin-card {
-    background-color: var(--color-primary);
+    animation: fadeup 1s ease forwards;
+    margin-left: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
     color: var(--text-on-dark);
     width: 100%;
     max-width: 420px;
@@ -674,6 +748,22 @@ nav ul li a.active {
     border-radius: 30px;
     box-shadow: var(--shadow-soft);
     text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.signin-card:hover {
+    backdrop-filter: blur(50px);
+}
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translatey(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
 }
 
 .signin-header h2 {
