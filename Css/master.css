@@ -898,7 +898,7 @@ nav ul li a.active {
     display: flex;
     justify-content: start;
     align-items: center;
-    height: 120vh;
+    height: 130vh;
 }
 
 
@@ -906,13 +906,12 @@ nav ul li a.active {
 
 .feedback-form {
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(18px);
-    padding: 40px;
-    max-width: 450px;
+    backdrop-filter: blur(60px);
     width: 100%;
+    max-width: 420px;
+    padding: 50px 40px;
     border-radius: 30px;
     margin-left: 60px;
-    margin-bottom: 120px;
     box-shadow: var(--shadow-soft);
     transition: all var(--transition);
     animation: fadeup 0.5s ease;
