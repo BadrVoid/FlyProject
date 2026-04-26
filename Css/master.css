@@ -1206,3 +1206,53 @@ nav ul li a.active {
     color: var(--text-muted);
     font-size: 13px;
 }
+
+
+
+/* my tickets */
+#last {
+    background-image: url(../Imgs/beige-background.jpg);
+    padding: 40px 0;
+}
+
+#last h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+#last .row .item {
+    background-color: #e5d5be;
+    padding: 20px 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#last .row .item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translatey(-20px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#last .row .item h3,
+#last .row .item h5 {
+    text-align: center;
+    color: #183153;
+}
+
+#last .row .item h5 {
+    margin-bottom: 15px;
+}
+
+#last .row .item p {
+    padding-left: 80px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #183153;
+}
+
+#last .row .item p span {
+    color: #486893;
+}
