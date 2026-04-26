@@ -14,4 +14,5 @@
     --radius-md: 12px;
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.6);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --text-on-inv: #fafafa;
 }
