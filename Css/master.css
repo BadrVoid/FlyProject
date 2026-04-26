@@ -322,7 +322,7 @@ nav ul li a.active {
     width: 120px;
     height: 4px;
     background: var(--color-accent);
-    margin: 0 auto;
+    margin: 12px auto;
 }
 
 .features-grid {
@@ -934,7 +934,7 @@ nav ul li a.active {
  **********************************/
 
 .container4 {
-    background: linear-gradient(135deg, var(--color-bg-main) 0%, var(--color-secondary) 100%);
+    background: linear-gradient( 135deg, var(--color-bg-main) 0%, var(--color-secondary) 100%);
     height: 100vh;
 }
 
@@ -945,7 +945,7 @@ nav ul li a.active {
     padding-top: 20px;
     font-size: 37px;
     font-weight: 800;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-style: italic;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -1016,7 +1016,7 @@ nav ul li a.active {
     font-size: 1.4rem;
     color: var(--text-on-inv);
     margin-bottom: 8px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-style: italic;
 }
 
@@ -1024,6 +1024,130 @@ nav ul li a.active {
     font-size: 1rem;
     color: var(--text-on-inv);
     line-height: 1.5;
+}
+
+
+/**********************************
+            My Ticket Styles
+ **********************************/
+
+.my-tickets {
+    background-image: url(../Imgs/tt4.jpg);
+    background: linear-gradient( 135deg, var(--color-bg-main) 0%, var(--color-secondary) 70%, var(--color-accent) 150%/* Pushes the orange to the very corner */
+    );
+}
+
+#next {
+    padding-bottom: 50px;
+}
+
+#next h2 {
+    color: var(--text-on-inv);
+    text-align: center;
+    padding: 10px 0;
+}
+
+#next .table-contianer .table {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 250px;
+    overflow: hidden;
+}
+
+#next .table th,
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+#last {
+    padding: 80px 0;
+}
+
+#last h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background: var(--color-accent);
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+#last .row .item {
+    background-color: #C5D7F2;
+    padding: 20px 5px;
+    margin: 10px 0;
+    box-shadow: var(--shadow-soft);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#last .row .item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translatey(-10px);
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#last h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-on-inv);
+}
+
+#last .row .item h3,
+#last .row .item h5 {
+    text-align: center;
+    color: #183153;
+}
+
+#last .row .item p {
+    padding-left: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    border-bottom: 1.6px dashed var(--color-border);
+    color: #183153;
+}
+
+#last .row .item p span {
+    color: #486893;
+}
+
+#last .row .item h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+#last .row .item h5 {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+#last .row .item p span {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+#last .row .item i {
+    color: var(--color-accent);
+    margin-left: 8px;
 }
 
 
@@ -1303,54 +1427,4 @@ nav ul li a.active {
 .footer-bottom p {
     color: var(--text-muted);
     font-size: 13px;
-}
-
-
-
-/* my tickets */
-#last {
-    background-image: url(../Imgs/beige-background.jpg);
-    padding: 40px 0;
-}
-
-#last h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--color-primary);
-}
-
-#last .row .item {
-    background-color: #e5d5be;
-    padding: 20px 5px;
-    margin: 10px 0;
-    border-radius: 10px;
-    transition-duration: 0.5s;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#last .row .item:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: translatey(-20px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-#last .row .item h3,
-#last .row .item h5 {
-    text-align: center;
-    color: #183153;
-}
-
-#last .row .item h5 {
-    margin-bottom: 15px;
-}
-
-#last .row .item p {
-    padding-left: 80px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #183153;
-}
-
-#last .row .item p span {
-    color: #486893;
 }
