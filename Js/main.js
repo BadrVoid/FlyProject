@@ -68,26 +68,49 @@ document.addEventListener("DOMContentLoaded", () => {
     if (signInForm) {
         signInForm.addEventListener("submit", (event) => {
             event.preventDefault();
+            //trim => remove spaces before and after the input
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
 
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+            /*
+            ^ → start of string
+            [^\s@]+ → any characters except space or @ (username)
+            @ → must contain @
+            [^\s@]+ → domain name
+            \. → dot (.)
+            [^\s@]+ → extension (com, net, etc)
+            $ → end of string 
+            {6,} → at least 6 characters
 
-            if (email && password) {
-                const btn = signInForm.querySelector(".btn-signin");
-                btn.innerText = "Connecting...";
-                btn.style.opacity = "0.7";
+            emailRegex.test("test@gmail.com") => true
+            emailRegex.test("bad email")    => false
+            */
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordRegex = /^.{6,}$/; // min 6 chars
 
-                const username = email.split("@")[0];
-                localStorage.setItem("userDisplayName", username);
-                localStorage.setItem("signedIn", "true");
-
-                setTimeout(() => {
-                    window.location.href = "../Pages/profile.html";
-                }, 1000);
+            if (!emailRegex.test(email)) {
+                alert("Enter a valid email address");
+                return;
             }
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters");
+                return;
+            }
+
+            const btn = signInForm.querySelector(".btn-signin");
+            btn.innerText = "Connecting...";
+            btn.style.opacity = "0.7";
+
+            const username = email.split("@")[0];
+            localStorage.setItem("userDisplayName", username);
+            localStorage.setItem("signedIn", "true");
+
+            setTimeout(() => {
+                window.location.href = "../Pages/profile.html";
+            }, 1000);
         });
     }
-
     // =========================
     // 6. SIGN UP
     // =========================
@@ -98,8 +121,33 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
 
             const nameInput = document.getElementById("fullname");
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
             const createBtn = document.getElementById("createAccBtn");
-            const name = nameInput.value;
+
+            const name = nameInput.value.trim();
+            const email = emailInput ? emailInput.value.trim() : "";
+            const password = passwordInput ? passwordInput.value.trim() : "";
+
+            const nameRegex = /^[a-zA-Z\s]{3,}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordRegex = /^.{6,}$/;
+
+            if (!nameRegex.test(name)) {
+                alert("Name must be at least 3 letters (no numbers)");
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Enter a valid email address");
+                return;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters");
+                return;
+            }
 
             createBtn.innerText = "Creating Account...";
             createBtn.style.opacity = "0.7";
@@ -113,7 +161,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1200);
         });
     }
-
     // =========================
     // 7. PROFILE DISPLAY
     // =========================

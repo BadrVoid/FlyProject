@@ -568,9 +568,18 @@ nav ul li a.active {
     align-items: center;
 }
 
-.profileheader .btn-primary {
+.profileheader .logout-btn {
     border-radius: 12px;
     padding: 10px 25px;
+    background-color: var(--color-accent);
+    color: var(--text-on-dark);
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.profileheader .logout-btn:hover {
+    background: var(--color-border);
+    transform: scale(1.06);
 }
 
 .profileheader .identity {

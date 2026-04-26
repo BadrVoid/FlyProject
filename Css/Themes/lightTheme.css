@@ -1,32 +1,16 @@
 :root {
-    /* --- LIGHT THEME COLORS (Sky High) --- */
-    --color-bg-main: #E8F4FD;
-    /* Soft sky blue background */
-    --color-surface: #FFFFFF;
-    /* White cards & nav */
+    --color-bg-main: #e8f4fd;
+    --color-surface: #ffffff;
     --color-primary: #082750;
-    /* Deep aviation blue for header/footer */
-    --color-secondary: #2C7DA0;
-    /* Ocean blue for action buttons */
-    --color-accent: #FFB347;
-    /* Sun orange for alerts & highlights */
-    /* --- BORDERS & TEXT --- */
-    --color-border: #D4E6F1;
-    /* Soft blue-gray border */
-    --text-main: #1B2B40;
-    /* Deep navy-blue text */
+    --color-secondary: #2c7da0;
+    --color-accent: #ffb347;
+    --color-border: #d4e6f1;
+    --text-main: #1b2b40;
     --text-muted: #abbbc5;
-    /* Soft blue-gray for labels */
-    --text-on-dark: #FFFFFF;
-    /* White text on dark backgrounds */
-    /* --- STATUS --- */
-    --status-success: #2E8B57;
-    /* Sea green */
-    --status-danger: #E74C4C;
-    /* Skyline red */
-    --status-warning: #F39C12;
-    /* Sunset orange */
-    /* --- UI CONSTANTS --- */
+    --text-on-dark: #ffffff;
+    --status-success: #2e8b57;
+    --status-danger: #e74c4c;
+    --status-warning: #f39c12;
     --radius-md: 10px;
     --shadow-soft: 0 6px 14px rgba(0, 0, 0, 0.08);
     --transition: 0.2s ease-in-out;
