@@ -231,4 +231,13 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "Pages/boarding.html";
         });
     }
+    // =========================
+    // 12.Faq
+    // =========================
+    document.querySelectorAll('.faq-question').forEach(e => {
+        e.addEventListener('click', () => {
+            const faqItem = e.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
 });

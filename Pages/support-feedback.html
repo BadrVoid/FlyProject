@@ -76,33 +76,67 @@
     </header>
     <!-- Feedback Section -->
     <div class="support">
-        <form class="feedback-form">
-            <div class="feedback-header">
-                <h2 class="feedback-title">Feedback</h2>
-                <p class="feedback-subtitle">We value your thoughts and suggestions.</p>
+        <div class="support-container">
+            <form class="feedback-form">
+                <div class="feedback-header">
+                    <h2 class="feedback-title">Feedback</h2>
+                    <p class="feedback-subtitle">We value your thoughts and suggestions.</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-user"></i> First Name</label>
+                        <input type="text" placeholder="John" class="feedback-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Doe" class="feedback-input" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" placeholder="example@mail.com" class="feedback-input" required />
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-comment-dots"></i> Your Message</label>
+                    <textarea placeholder="How can we help you fly better?" class="feedback-textarea" rows="4" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms">I accept the <span>Team services</span></label>
+                </div>
+
+                <button type="submit" class="send-btn">
+        <span>Send Message</span>
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+            </form>
+
+            <div class="faq-card">
+                <h2 class="faq-title">Common Questions</h2>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">How do I cancel my booking? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>You can cancel via 'My Flights' up to 24 hours before departure for a full refund.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">What is the baggage allowance? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Economy: 23kg, Business: 2x23kg, First Class: Unlimited weight (up to 3 pieces).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">Can I change my seat? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes, visit the 'Profile' section anytime before your check-in window closes.</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label>First Name:</label>
-                <input type="text" placeholder="Enter your first name" class="feedback-input" required />
-            </div>
-            <div class="form-group">
-                <label>Last Name:</label>
-                <input type="text" placeholder="Enter your last name" class="feedback-input" required />
-            </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" placeholder="Enter your email" class="feedback-input" required />
-            </div>
-            <div class="form-group">
-                <label>Your Issue/Feedback:</label>
-                <textarea placeholder="Enter your meassege here..." class="feedback-textarea" rows="6" required></textarea>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="terms" required />
-                <label for="terms">I accept all <span>Team services</span></label>
-            </div>
-            <button type="submit" class="send-btn">Send</button>
-        </form>
+        </div>
     </div>
     <footer class="simple-footer">
         <div class="footer-grid">
@@ -141,9 +175,11 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul class="contact-list">
-                    <li><i class="fas fa-phone"></i> +1 234 567 890</li>
-                    <li><i class="fas fa-envelope"></i> support@flywithus.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> New York, USA</li>
+                    <li><i class="fas fa-phone"></i> +20 133 044 0455</li>
+                    <li><i class="fas fa-envelope"></i> support@flywithus.com.eg</li>
+                    <li><i class="fas fa-map-marker-alt"></i> DownTown, Cairo</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Borg El Arab, Alexandria</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Hurghada Hub, Red Sea</li>
                 </ul>
             </div>
         </div>
