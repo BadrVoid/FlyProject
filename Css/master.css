@@ -369,6 +369,7 @@ nav ul li a.active {
     font-size: 0.95rem;
 }
 
+
 /**********************************
         TimeTable Styles
  **********************************/
@@ -378,10 +379,7 @@ nav ul li a.active {
 
 .BD {
     position: relative;
-    min-height: 100vh;
     width: 100%;
-    margin: 0;
-    padding: 20px 0;
     overflow-x: hidden;
     background: url("../Imgs/40.jpg") no-repeat center center;
 }
@@ -405,8 +403,8 @@ nav ul li a.active {
 .cap {
     font-family: "Nunito Sans", sans-serif;
     font-size: 3.3rem;
-    color: var(--text-on-inv);
-    margin-bottom: 1rem;
+    color: var(--color-primary);
+    margin: 1rem;
     text-align: center;
     font-weight: 800;
 }
@@ -452,6 +450,7 @@ nav ul li a.active {
 .TP tbody tr:hover {
     background-color: var(--color-secondary);
     color: var(--text-on-dark);
+    transform: scale(1.04);
 }
 
 .MB {

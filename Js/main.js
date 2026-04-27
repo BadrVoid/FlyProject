@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookHome = document.querySelector(".home-btn");
     if (bookHome) {
         bookHome.addEventListener("click", (e) => {
-            window.location.href = "../Pages/boarding.html";
+            window.location.href = "Pages/boarding.html";
         });
     }
 });
