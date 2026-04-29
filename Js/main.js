@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const username = email.split("@")[0];
             localStorage.setItem("userDisplayName", username);
+            localStorage.setItem("userDisplayEmail", email);
             localStorage.setItem("signedIn", "true");
 
             setTimeout(() => {
@@ -153,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             createBtn.style.opacity = "0.7";
 
             localStorage.setItem("userDisplayName", name);
+            localStorage.setItem("userDisplayEmail", email);
             localStorage.setItem("signedIn", "true");
             localStorage.setItem("hasAccount", "true");
 
@@ -165,11 +167,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. PROFILE DISPLAY
     // =========================
     const profName = document.querySelector(".ProName");
-
-    if (profName && isSigned === "true") {
-        const savedName = localStorage.getItem("userDisplayName") || "User";
-        profName.textContent =
-            savedName.charAt(0).toUpperCase() + savedName.slice(1);
+    const profEmail = document.querySelector(".ProEmail");
+    if (isSigned === "true") {
+        if (profName) {
+            const savedName = localStorage.getItem("userDisplayName") || "User";
+            profName.textContent = savedName.charAt(0).toUpperCase() + savedName.slice(1);
+        }
+        if (profEmail) {
+            const savedEmail = localStorage.getItem("userDisplayEmail") || "Not provided";
+            profEmail.textContent = savedEmail.charAt(0).toUpperCase() + savedEmail.slice(1);
+        }
     }
 
     // =========================
@@ -181,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("signedIn");
             localStorage.removeItem("userDisplayName");
+            localStorage.removeItem("userDisplayEmail");
             window.location.href = "../Pages/signIn.html";
         });
     }
