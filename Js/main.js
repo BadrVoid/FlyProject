@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     // =========================
     // 1. BASIC STATE
     // =========================
@@ -18,8 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
     // 3. SECURITY ROUTES
     // =========================
-    if (isSigned === "true" &&
-        (currentPage.includes("signIn.html") || currentPage.includes("createAcc.html"))) {
+    if (
+        isSigned === "true" &&
+        (currentPage.includes("signIn.html") ||
+            currentPage.includes("createAcc.html"))
+    ) {
         window.location.href = "../Pages/profile.html";
         return;
     }
@@ -73,18 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const password = document.getElementById("password").value.trim();
 
             /*
-            ^ → start of string
-            [^\s@]+ → any characters except space or @ (username)
-            @ → must contain @
-            [^\s@]+ → domain name
-            \. → dot (.)
-            [^\s@]+ → extension (com, net, etc)
-            $ → end of string 
-            {6,} → at least 6 characters
+                  ^ → start of string
+                  [^\s@]+ → any characters except space or @ (username)
+                  @ → must contain @
+                  [^\s@]+ → domain name
+                  \. → dot (.)
+                  [^\s@]+ → extension (com, net, etc)
+                  $ → end of string 
+                  {6,} → at least 6 characters
 
-            emailRegex.test("test@gmail.com") => true
-            emailRegex.test("bad email")    => false
-            */
+                  emailRegex.test("test@gmail.com") => true
+                  emailRegex.test("bad email")    => false
+                  */
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             const passwordRegex = /^.{6,}$/; // min 6 chars
 
@@ -171,11 +173,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isSigned === "true") {
         if (profName) {
             const savedName = localStorage.getItem("userDisplayName") || "User";
-            profName.textContent = savedName.charAt(0).toUpperCase() + savedName.slice(1);
+            profName.textContent =
+                savedName.charAt(0).toUpperCase() + savedName.slice(1);
         }
         if (profEmail) {
-            const savedEmail = localStorage.getItem("userDisplayEmail") || "Not provided";
-            profEmail.textContent = savedEmail.charAt(0).toUpperCase() + savedEmail.slice(1);
+            const savedEmail =
+                localStorage.getItem("userDisplayEmail") || "Not provided";
+            profEmail.textContent =
+                savedEmail.charAt(0).toUpperCase() + savedEmail.slice(1);
         }
     }
 
@@ -194,12 +199,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================
-    // 9. BUY BUTTON PROTECTION
+    // 9. BUY BUTTON PROTECTION & CLASS SELECTION
     // =========================
     const buyButtons = document.querySelectorAll(".btn-buy");
 
     buyButtons.forEach((button) => {
         button.addEventListener("click", () => {
+            // Get the class type from the data attribute
+            const selectedClass = button.getAttribute("data-class");
+            localStorage.setItem("selectedTicketClass", selectedClass);
+
             if (localStorage.getItem("signedIn") === "true") {
                 window.location.href = "../Pages/paymentMethod.html";
             } else {
@@ -223,7 +232,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.style.opacity = "0.7";
 
             setTimeout(() => {
-                alert("Thank you! Your feedback has been received and will be reviewed.");
+                alert(
+                    "Thank you! Your feedback has been received and will be reviewed.",
+                );
                 btn.innerText = "Sent ✓";
                 btn.style.opacity = "1";
                 feedbackForm.reset();
@@ -242,10 +253,88 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
     // 12.Faq
     // =========================
-    document.querySelectorAll('.faq-question').forEach(e => {
-        e.addEventListener('click', () => {
+    document.querySelectorAll(".faq-question").forEach((e) => {
+        e.addEventListener("click", () => {
             const faqItem = e.parentElement;
-            faqItem.classList.toggle('active');
+            faqItem.classList.toggle("active");
         });
     });
+
+    // =========================
+    // 13. FLIGHT BOOKING SUBMISSION (Updated)
+    // =========================
+    const bookingForm = document.querySelector(".Book");
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Get values from your IDs
+            const fromVal = document.getElementById("From").value;
+            const toVal = document.getElementById("TO").value;
+            const dateVal = document.getElementById("Date").value;
+            // NEW: Get the Ticket Class value
+            const classVal = document.getElementById("Class").value;
+            const passenger =
+                document.getElementById("First").value +
+                " " +
+                document.getElementById("Last").value;
+
+            // Store as simple strings
+            localStorage.setItem("booked_From", fromVal);
+            localStorage.setItem("booked_To", toVal);
+            localStorage.setItem("booked_Date", dateVal);
+            localStorage.setItem("booked_Class", classVal); // Save class
+            localStorage.setItem("booked_Passenger", passenger);
+            // Redirect to your flight page
+            window.location.href = "../Pages/yourFlights.html";
+        });
+    }
+
+
+    // =========================
+    // 14. DISPLAY IN UPCOMING TRIPS TABLE
+    // =========================
+    const flightTableBody = document.getElementById("tableBody");
+
+    if (flightTableBody) {
+        // Retrieve the simple strings saved from the booking form
+        const fromVal = localStorage.getItem("booked_From");
+        const toVal = localStorage.getItem("booked_To");
+        const dateVal = localStorage.getItem("booked_Date");
+        const classVal = localStorage.getItem("booked_Class");
+
+        // We only add a row if there is actually data saved
+        if (fromVal && toVal) {
+            const newRow = `
+                <tr>
+                    <td>${fromVal}</td>
+                    <td>${toVal}</td>
+                    <td>${dateVal}</td>
+                    <td>12:00 PM</td>
+                    <td>C1</td>      
+                    <td>${classVal}</td>
+                </tr>
+            `;
+
+            // This adds the new flight to the TOP of the table
+            flightTableBody.insertAdjacentHTML("afterbegin", newRow);
+        }
+    }
+    // =========================
+    // 15. AUTO-FILL & DISABLE CLASS INPUT
+    // =========================
+    // This runs on the page where the .Book form exists
+    const classSelect = document.getElementById("Class");
+
+    if (classSelect) {
+        const savedClass = localStorage.getItem("selectedTicketClass");
+
+        if (savedClass) {
+            classSelect.value = savedClass;
+            classSelect.disabled = true;
+
+            classSelect.style.opacity = "0.7";
+            classSelect.style.cursor = "not-allowed";
+        }
+    }
 });

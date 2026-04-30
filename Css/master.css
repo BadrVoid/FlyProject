@@ -1718,6 +1718,152 @@ td {
 }
 
 
+/* 1. Page Background */
+
+.Booking {
+    background-image: url("../Imgs/34.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: var(--color-bg-main);
+}
+
+
+/* 2. Form Container */
+
+.Book {
+    background-color: rgba(44, 125, 160, 0.9);
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    color: var(--text-on-dark);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition);
+}
+
+.Book h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 36px;
+    color: var(--text-on-dark);
+}
+
+
+/* 3. The Grid Engine */
+
+.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* 4. Labels (Using Accent color) */
+
+.Book label {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Book input,
+.Book select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-on-dark);
+    font-size: 15px;
+    transition: all var(--transition);
+    box-sizing: border-box;
+}
+
+.Book input:focus,
+.Book select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* 6. Layout Helpers */
+
+.full-width {
+    grid-column: span 2;
+}
+
+
+/* 7. Trip Type Section */
+
+.radio {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: 25px;
+    border: 1px solid var(--color-border);
+}
+
+.radio h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+
+/* 8. Action Button Class (No 'button' tag used) */
+
+.btn-confirm {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    /* Deep Navy */
+    color: var(--text-on-dark);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    display: block;
+    text-align: center;
+}
+
+.btn-confirm:hover {
+    background-color: var(--color-secondary);
+    /* Lighter Blue */
+    color: var(--text-on-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* 9. Dropdown logic */
+
+select option {
+    background-color: var(--color-primary);
+    color: var(--text-on-dark);
+}
+
+
 /**********************************
             Footer Styles
  **********************************/
