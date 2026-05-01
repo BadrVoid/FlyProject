@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const extraRows = document.getElementById('extra-rows');
 
         if (extraRows.style.display === "none") {
-            extraRows.style.display = "table-row-group"; // This is the correct display for tbody
+            extraRows.style.display = "table-row-group";
             this.textContent = "Show Less";
         } else {
             extraRows.style.display = "none";
