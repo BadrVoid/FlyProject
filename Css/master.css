@@ -53,6 +53,44 @@ nav ul li a {
     font-weight: 500;
     transition: color var(--transition);
     position: relative;
+    display: inline-block;
+}
+
+nav ul li {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: navEnter 0.6s ease forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+nav ul li:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+nav ul li:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+@keyframes navEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 nav ul li a:hover {
@@ -505,7 +543,8 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("../Imgs/16.jpg") center / cover no-repeat;
+    /* Soft blue sky and clouds */
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=1600") center / cover no-repeat fixed;
 }
 
 .booking-header {
@@ -515,7 +554,7 @@ nav ul li a.active {
 }
 
 .booking-header h1 {
-    color: var(--text-main);
+    color: #fff;
     font-size: 2.8rem;
     margin-bottom: 10px;
 }
@@ -713,18 +752,19 @@ nav ul li a.active {
             Map Styles
  **********************************/
 
-
-/* Container with your gradient */
-
 .container4 {
-    background: linear-gradient( 135deg, var(--color-bg-main) 0%, var(--color-secondary) 100%);
+    /* Using a deep navy/slate overlay to make the map glow */
+    background: linear-gradient(rgba(11, 15, 26, 0.85), rgba(11, 15, 26, 0.9)), url("https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=1600") center / cover no-repeat fixed;
     height: 125vh;
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .map-title {
     text-align: center;
-    color: var(--text-on-inv);
+    color: #fff;
     margin-bottom: 40px;
     font-size: 37px;
     font-weight: 800;
@@ -1114,7 +1154,7 @@ nav ul li a.active {
 /* Background & Main Layout */
 
 .support {
-    background: url("../Imgs/38.jpg") center / cover no-repeat fixed;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1600") center/cover no-repeat fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -1325,7 +1365,8 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     color: white;
-    background: url(../Imgs/34.jpg) center / cover no-repeat;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=1600") center / cover no-repeat;
+    min-height: 450px;
 }
 
 .profilemain {
@@ -1691,6 +1732,10 @@ nav ul li a.active {
     padding: 10px 0;
 }
 
+#next .table-contianer {
+    animation: fadedown 0.5s forwards;
+}
+
 #next .table-contianer .table {
     margin-right: auto;
     margin-left: auto;
@@ -1742,6 +1787,41 @@ td {
     transform: translatey(-10px);
     transform: scale(1.08);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ticketcards {
+    animation: fadedown 1s forwards;
+}
+
+.ticketcards:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.ticketcards:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ticketcards:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.ticketcards:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.ticketcards:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #last h2 {
