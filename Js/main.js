@@ -352,21 +352,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // =========================
-    // 17. PAYMENT METHOD TOGGLE
-    // =========================
+});
+// =========================
+// 17. PAYMENT METHOD TOGGLE
+// =========================
+document.addEventListener("DOMContentLoaded", function() {
     const method = document.getElementById("Method");
     const cardSection = document.getElementById("visadetails");
     const cardInputs = cardSection.querySelectorAll("input");
 
     function togglePayment() {
         const isVisa = method.value === "visa";
-
         cardSection.style.display = isVisa ? "grid" : "none";
-
-        cardInputs.forEach(input => {
-            input.required = isVisa;
-        });
+        cardInputs.forEach(input => input.required = isVisa);
     }
 
     method.addEventListener("change", togglePayment);
@@ -375,4 +373,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const layoutBtn = document.getElementById('layoutToggle');
+    const ticketGrid = document.querySelector('.ticket-grid');
+
+    // Check for saved preference
+    const currentLayout = localStorage.getItem('preferred-layout');
+    if (currentLayout === 'list') {
+        ticketGrid.classList.add('list-view');
+    }
+
+    layoutBtn.addEventListener('click', () => {
+        ticketGrid.classList.toggle('list-view');
+
+        // Save preference
+        if (ticketGrid.classList.contains('list-view')) {
+            localStorage.setItem('preferred-layout', 'list');
+        } else {
+            localStorage.setItem('preferred-layout', 'grid');
+        }
+
+        // Add a "pop" animation to the button
+        layoutBtn.style.transform = 'scale(0.9)';
+        setTimeout(() => layoutBtn.style.transform = 'scale(1)', 100);
+    });
 });

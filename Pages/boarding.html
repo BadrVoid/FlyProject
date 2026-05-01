@@ -1,36 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <title>FlyWithUs | Boarding</title>
 
-    <link rel="stylesheet" href="../Css/bootstrap.css">
-    <link rel="stylesheet" href="../Css/fonts.css">
-    <link rel="stylesheet" href="../Css/master.css">
+    <link rel="stylesheet" href="../Css/bootstrap.css" />
+    <link rel="stylesheet" href="../Css/fonts.css" />
+    <link rel="stylesheet" href="../Css/master.css" />
 
-    <link rel="stylesheet" href="../Css/Themes/lightTheme.css" id="theme-style">
+    <link rel="stylesheet" href="../Css/Themes/lightTheme.css" id="theme-style" />
 
-    <link rel="icon" href="../Imgs/33.jpg" type="image/jpeg">
+    <link rel="icon" href="../Imgs/33.jpg" type="image/jpeg" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="../index.html" style="text-decoration: none;">
+            <a href="../index.html" style="text-decoration: none">
                 <p>Fly<span>WithUs</span></p>
             </a>
-
         </div>
         <nav>
             <ul>
                 <li>
-                    <a href="../index.html">
-                        <i class="fa-solid fa-house"></i> Home
-                    </a>
+                    <a href="../index.html"> <i class="fa-solid fa-house"></i> Home </a>
                 </li>
                 <li>
                     <a href="../Pages/timetable.html">
@@ -61,12 +58,16 @@
         </nav>
         <div class="header-actions">
             <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-
+          <i class="fas fa-moon"></i>
+        </button>
+            <button id="layoutToggle" class="profile-btn">
+            <i class="fas fa-th-list"></i>
+          <span>Layout</span>
+        </button>
             <!-- Ticket Button -->
             <a href="../Pages/yourFlights.html" class="flight-btn">
-                <i class="fa-solid fa-ticket"></i> </a>
+                <i class="fa-solid fa-ticket"></i>
+            </a>
 
             <!-- Profile Button -->
             <a href="../Pages/signIn.html" class="profile-btn">
@@ -78,12 +79,14 @@
     <main class="booking-container">
         <section class="booking-header">
             <h1>Book Your Flight</h1>
-            <p>Select your preferred class and start your journey with FlyWithUs.</p>
+            <p>
+                Select your preferred class and start your journey with FlyWithUs.
+            </p>
         </section>
 
         <div class="ticket-grid">
             <div class="ticket-card firstone">
-                <div class="ticket-type economy ">Economy</div>
+                <div class="ticket-type economy">Economy</div>
                 <div class="ticket-price">
                     <span class="currency">$</span>
                     <span class="amount">250</span>
@@ -94,7 +97,8 @@
                     <li><i class="fas fa-times"></i> No Refund</li>
                     <li><i class="fas fa-times"></i> Meals Not Included</li>
                 </ul>
-                <button class="btn-buy" data-class="Economy">Select Flight</button> </div>
+                <button class="btn-buy" data-class="Economy">Buy Now</button>
+            </div>
 
             <div class="ticket-card featured secondone">
                 <div class="ticket-type business">Business</div>
@@ -108,7 +112,8 @@
                     <li><i class="fas fa-check"></i> Complimentary Meals</li>
                     <li><i class="fas fa-check"></i> Priority Boarding</li>
                 </ul>
-                <button class="btn-buy" data-class="Business">Select Flight</button> </div>
+                <button class="btn-buy" data-class="Business">Buy Now</button>
+            </div>
 
             <div class="ticket-card thirdone">
                 <div class="ticket-type first">First Class</div>
@@ -122,7 +127,10 @@
                     <li><i class="fas fa-check"></i> 5-Star Dining</li>
                     <li><i class="fas fa-check"></i> Full Refundable</li>
                 </ul>
-                <button class="btn-buy" data-class="First Class">Select Flight</button> </div>
+                <button class="btn-buy" data-class="First Class">
+            Buy Now
+          </button>
+            </div>
         </div>
     </main>
     <footer class="simple-footer">
@@ -159,19 +167,21 @@
                 </ul>
             </div>
 
-            <div class="footer-col ">
+            <div class="footer-col">
                 <h4>Contact</h4>
-                <ul class="contact-list ">
-                    <li><i class="fas fa-phone "></i> +20 133 044 0455</li>
-                    <li><i class="fas fa-envelope "></i> support@flywithus.com.eg</li>
-                    <li><i class="fas fa-map-marker-alt "></i> DownTown, Cairo</li>
-                    <li><i class="fas fa-map-marker-alt "></i> Borg El Arab, Alexandria</li>
-                    <li><i class="fas fa-map-marker-alt "></i> Hurghada Hub, Red Sea</li>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone"></i> +20 133 044 0455</li>
+                    <li><i class="fas fa-envelope"></i> support@flywithus.com.eg</li>
+                    <li><i class="fas fa-map-marker-alt"></i> DownTown, Cairo</li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> Borg El Arab, Alexandria
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Hurghada Hub, Red Sea</li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom ">
+        <div class="footer-bottom">
             <p>&copy; 2025 FlyWithUs. All rights reserved.</p>
         </div>
     </footer>

@@ -162,6 +162,7 @@ nav ul li a.active {
     cursor: pointer;
     width: 40px;
     overflow: hidden;
+    border: none;
     color: white;
     text-decoration: none;
     transition: all var(--transition);
@@ -746,6 +747,74 @@ nav ul li a.active {
 
 .btn-buy:hover {
     background-color: var(--color-accent);
+}
+
+.ticket-grid.list-view {
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    gap: 20px;
+}
+
+.ticket-grid.list-view .ticket-card {
+    flex-direction: row;
+    padding: 0;
+    min-height: 140px;
+    text-align: left;
+    align-items: center;
+}
+
+.ticket-grid.list-view .ticket-type {
+    flex: 0 0 220px;
+    margin: 0;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-right: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.ticket-grid.list-view .ticket-price {
+    flex: 0 0 200px;
+    margin: 0;
+    padding: 0 30px;
+    display: flex;
+    gap: 5px;
+}
+
+.ticket-grid.list-view .ticket-price .amount {
+    font-size: 2.8rem;
+}
+
+.ticket-grid.list-view .ticket-features {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+    margin: 0;
+    padding: 0 30px;
+    border-top: none;
+    /* Remove the grid-mode border */
+}
+
+.ticket-grid.list-view .ticket-features li {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ticket-grid.list-view .btn-buy {
+    margin-right: 40px;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+.ticket-grid.list-view .ticket-card.featured::before {
+    top: 25px;
+    left: -45px;
+    padding: 5px 35px;
 }
 
 
