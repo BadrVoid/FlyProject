@@ -83,133 +83,134 @@
                 <h3>Trip Details</h3>
                 <span style="display:block ; margin-bottom: 10px;">Trip Type:</span>
                 <label for="OneWay">One Way</label>
-                <input type="radio" name="TripType" id="OneWay" checked>
+                <input type="radio" name="TripType" id="OneWay" checked required>
                 <label for="RoundTrip">Round Trip</label>
                 <input type="radio" name="TripType" id="RoundTrip">
                 <label for="MultiCity">Multi City</label>
                 <input type="radio" name="TripType" id="MultiCity">
             </div>
 
-            <!-- Start of Grid Container -->
             <div class="block">
+
                 <div class="field-group">
                     <label for="From">From:</label>
-                    <select name="from" id="From">
-                    <option value="" disabled selected>Departure City</option>
-                    <option value="CAI">Cairo, Egypt</option>
-                    <option value="DXB">Dubai, UAE</option>
-                    <option value="HBE">Alexandria, Egypt</option>
-                    <option value="LHR">London, UK</option>
-                    <option value="JFK">New York, USA</option>
-                    <option value="HND">Tokyo, Japan</option>
-                    <option value="IST">Istanbul, Turkey</option>
-                </select>
+                    <select name="from" id="From" required>
+                <option value="" disabled selected>Departure City</option>
+                <option value="CAI">Cairo, Egypt</option>
+                <option value="DXB">Dubai, UAE</option>
+                <option value="HBE">Alexandria, Egypt</option>
+                <option value="LHR">London, UK</option>
+                <option value="JFK">New York, USA</option>
+                <option value="HND">Tokyo, Japan</option>
+                <option value="IST">Istanbul, Turkey</option>
+            </select>
                 </div>
 
                 <div class="field-group">
-                    <label for="To">To:</label>
-                    <select name="to" id="TO">
-                    <option value="" disabled selected>Arrival City</option>
-                    <option value="CDG">Paris, France</option>
-                    <option value="ZRH">Zurich, Switzerland</option>
-                    <option value="SIN">Singapore</option>
-                    <option value="ROM">Rome, Italy</option>
-                    <option value="CMN">Casablanca, Morocco</option>
-                    <option value="SSH">Sharm Elsheikh, Egypt</option>
-                    <option value="OSL">Oslo, Norway</option>
-                </select>
+                    <label for="TO">To:</label>
+                    <select name="to" id="TO" required>
+                <option value="" disabled selected>Arrival City</option>
+                <option value="CDG">Paris, France</option>
+                <option value="ZRH">Zurich, Switzerland</option>
+                <option value="SIN">Singapore</option>
+                <option value="ROM">Rome, Italy</option>
+                <option value="CMN">Casablanca, Morocco</option>
+                <option value="SSH">Sharm Elsheikh, Egypt</option>
+                <option value="OSL">Oslo, Norway</option>
+            </select>
                 </div>
 
                 <div class="field-group">
                     <label for="Date">Departure Date:</label>
-                    <input type="date" id="Date">
+                    <input type="date" id="Date" required>
                 </div>
 
                 <div class="field-group">
                     <label for="Passengers">Passengers:</label>
-                    <input type="number" id="Passengers" placeholder="e.g., 2">
+                    <input type="number" id="Passengers" placeholder="e.g., 2" required min="1" max="10">
                 </div>
 
                 <div class="field-group">
                     <label for="Class">Ticket Class:</label>
-                    <select name="Ticket Class" id="Class">
-                    <option value="First Class">First Class</option>
-                    <option value="Business">Business</option>
-                    <option value="Economy">Economy</option>
-                </select>
+                    <select id="Class" required>
+                <option value="First Class">First Class</option>
+                <option value="Business">Business</option>
+                <option value="Economy">Economy</option>
+            </select>
                 </div>
 
                 <div class="field-group">
                     <label for="AirPort">Airport:</label>
-                    <select name="airport" id="AirPort">
-                    <option value="CAI">Cairo International</option>
-                    <option value="BER">Berlin Brandenburg</option>
-                    <option value="JFK">John F. Kennedy</option>
-                    <option value="LHR">London Heathrow</option>
-                </select>
+                    <select id="AirPort" required>
+                <option value="CAI">Cairo International</option>
+                <option value="BER">Berlin Brandenburg</option>
+                <option value="JFK">John F. Kennedy</option>
+                <option value="LHR">London Heathrow</option>
+            </select>
                 </div>
 
                 <h2 class="full-width">Passenger Details</h2>
 
                 <div class="field-group">
                     <label for="First">First Name:</label>
-                    <input type="text" id="First" placeholder="John">
+                    <input type="text" id="First" placeholder="John" required maxlength="20">
                 </div>
 
                 <div class="field-group">
                     <label for="Last">Last Name:</label>
-                    <input type="text" id="Last" placeholder="Doe">
+                    <input type="text" id="Last" placeholder="Doe" required maxlength="20">
                 </div>
 
                 <div class="field-group">
                     <label for="Birth">Date of Birth:</label>
-                    <input type="date" id="Birth">
+                    <input type="date" id="Birth" required>
                 </div>
 
                 <div class="field-group">
                     <label for="Phone">Phone Number:</label>
-                    <input type="tel" id="Phone" placeholder="+20 123 456 789">
+                    <input type="tel" id="Phone" placeholder="+20 123 456 789" required maxlength="15">
                 </div>
 
                 <div class="field-group" style="grid-column: span 2;">
                     <label for="Email">Email Address:</label>
-                    <input type="email" id="Email" placeholder="example@mail.com">
+                    <input type="email" id="Email" placeholder="example@mail.com" required maxlength="50">
                 </div>
 
                 <div class="field-group">
                     <label for="CurrentLocation">Current Location:</label>
-                    <input type="text" id="CurrentLocation" placeholder="City, Country">
+                    <input type="text" id="CurrentLocation" placeholder="City, Country" required maxlength="50">
                 </div>
 
                 <div class="field-group">
                     <label for="Expiration">Passport Expiration:</label>
-                    <input type="date" id="Expiration">
+                    <input type="date" id="Expiration" required>
                 </div>
 
                 <h2 class="full-width">Payment</h2>
 
                 <div class="field-group" style="grid-column: span 2;">
                     <label for="Method">Payment Method</label>
-                    <select name="method" id="Method">
-                    <option value="visa">Visa / Mastercard</option>
-                    <option value="Cash">Cash</option>
-                </select>
+                    <select id="Method" required>
+                <option value="visa">Visa / Mastercard</option>
+                <option value="Cash">Cash</option>
+            </select>
                 </div>
 
                 <div class="field-group" style="grid-column: span 2;">
                     <label for="CardNumber">Card Number:</label>
-                    <input type="text" id="CardNumber" placeholder="1234 5678 9101 1121">
+                    <input type="text" id="CardNumber" placeholder="1234 5678 9101 1121" required maxlength="16">
                 </div>
 
                 <div class="field-group">
                     <label for="Expiry">Expiry Date:</label>
-                    <input type="month" id="Expiry">
+                    <input type="month" id="Expiry" required>
                 </div>
 
                 <div class="field-group">
                     <label for="Cvv">CVV:</label>
-                    <input type="password" id="Cvv" placeholder="***">
+                    <input type="password" id="Cvv" placeholder="***" required maxlength="3">
                 </div>
+
             </div>
 
             <button type="submit" id="bookingForm" class="btn-confirm">Confirm Booking</button>
