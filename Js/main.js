@@ -394,9 +394,5 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             localStorage.setItem('preferred-layout', 'grid');
         }
-
-        // Add a "pop" animation to the button
-        layoutBtn.style.transform = 'scale(0.9)';
-        setTimeout(() => layoutBtn.style.transform = 'scale(1)', 100);
     });
 });

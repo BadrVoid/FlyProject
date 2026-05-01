@@ -1093,7 +1093,7 @@ nav ul li a.active {
     margin-bottom: 10px;
 }
 
-z .fleet-tag {
+.fleet-tag {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -1161,6 +1161,7 @@ z .fleet-tag {
     box-shadow: var(--shadow-soft);
 }
 
+.timeline-content p,
 .timeline-content h3 {
     color: var(--text-on-inv);
 }
