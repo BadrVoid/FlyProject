@@ -463,11 +463,13 @@ nav ul li a.active {
     /* Subtle separation */
 }
 
+.TP #extra-rows tr:nth-child(even),
 .TP tbody tr:nth-child(odd) {
     background-color: var(--color-surface);
     color: var(--text-main);
 }
 
+.TP #extra-rows tr:nth-child(odd),
 .TP tbody tr:nth-child(even) {
     background-color: var(--color-primary);
     color: var(--text-on-dark);
