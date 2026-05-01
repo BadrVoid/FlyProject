@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     // =========================
-    // 15. AUTO-FILL & DISABLE CLASS INPUT
+    // 16. LOAD MORE BUTTON & PAYMENT METHOD TOGGLE
     // =========================
     document.getElementById('loadMoreBtn').addEventListener('click', function() {
         const extraRows = document.getElementById('extra-rows');
@@ -351,4 +351,28 @@ document.addEventListener("DOMContentLoaded", () => {
             this.textContent = "Load More";
         }
     });
+
+    // =========================
+    // 17. PAYMENT METHOD TOGGLE
+    // =========================
+    const method = document.getElementById("Method");
+    const cardSection = document.getElementById("visadetails");
+    const cardInputs = cardSection.querySelectorAll("input");
+
+    function togglePayment() {
+        const isVisa = method.value === "visa";
+
+        cardSection.style.display = isVisa ? "grid" : "none";
+
+        cardInputs.forEach(input => {
+            input.required = isVisa;
+        });
+    }
+
+    method.addEventListener("change", togglePayment);
+    togglePayment();
+
+
+
+
 });

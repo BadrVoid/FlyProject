@@ -753,8 +753,8 @@ nav ul li a.active {
 
 .container4 {
     /* Using a deep navy/slate overlay to make the map glow */
-    background: linear-gradient(rgba(11, 15, 26, 0.85), rgba(11, 15, 26, 0.9)), url("https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=1600") center / cover no-repeat fixed;
-    height: 125vh;
+    background: linear-gradient( 135deg, var(--color-bg-main) 0%, var(--color-secondary) 100%);
+    height: 130vh;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -1878,7 +1878,9 @@ td {
 }
 
 
-/* 1. Page Background */
+/**********************************
+            Booking Styles
+ **********************************/
 
 .Booking {
     background-image: url("../Imgs/34.jpg");
@@ -1892,9 +1894,6 @@ td {
     padding: 50px 20px;
     background-color: var(--color-bg-main);
 }
-
-
-/* 2. Form Container */
 
 .Book {
     background-color: rgba(44, 125, 160, 0.9);
@@ -1915,9 +1914,6 @@ td {
     color: var(--text-on-dark);
 }
 
-
-/* 3. The Grid Engine */
-
 .block {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1930,9 +1926,6 @@ td {
     flex-direction: column;
     gap: 5px;
 }
-
-
-/* 4. Labels (Using Accent color) */
 
 .Book label {
     font-size: 12px;
@@ -1962,15 +1955,13 @@ td {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-
-/* 6. Layout Helpers */
-
 .full-width {
     grid-column: span 2;
 }
 
-
-/* 7. Trip Type Section */
+#visadetails {
+    display: grid;
+}
 
 .radio {
     background: rgba(0, 0, 0, 0.1);
@@ -1986,8 +1977,9 @@ td {
     color: var(--color-accent);
 }
 
-
-/* 8. Action Button Class (No 'button' tag used) */
+#visadetails {
+    display: block;
+}
 
 .btn-confirm {
     width: 100%;
