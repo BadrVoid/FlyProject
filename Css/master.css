@@ -543,8 +543,7 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Soft blue sky and clouds */
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=1600") center / cover no-repeat fixed;
+    background: url("../Imgs/16.jpg") center / cover no-repeat;
 }
 
 .booking-header {
@@ -948,14 +947,17 @@ nav ul li a.active {
 
 .overview {
     padding: 100px 0;
-    background: var(--color-bg-main);
-    /* Light blue background */
-    color: var(--text-main);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    /* High-detail aviation engineering shot */
+    background: linear-gradient(rgba(10, 15, 25, 0.8), rgba(10, 15, 25, 0.7)), url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600") center / cover no-repeat fixed;
+    color: white;
 }
 
 .overview .container h1 {
     text-align: center;
-    color: var(--text-on-inv);
+    color: #fff;
     font-size: 2.8rem;
     font-weight: 700;
 }
@@ -967,12 +969,6 @@ nav ul li a.active {
     margin: 60px 0 30px;
     color: var(--color-secondary);
 }
-
-
-/* --- Fleet Cards --- */
-
-
-/* --- Fleet Cards --- */
 
 .fleet-grid {
     display: flex;
@@ -1020,12 +1016,13 @@ nav ul li a.active {
     opacity: 1;
 }
 
-.fleet-info h3 {
+.fleet-info h3,
+.fleet-info p {
     color: var(--text-on-inv);
     margin-bottom: 10px;
 }
 
-.fleet-tag {
+z .fleet-tag {
     position: absolute;
     top: 15px;
     right: 15px;
