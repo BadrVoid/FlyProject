@@ -337,4 +337,18 @@ document.addEventListener("DOMContentLoaded", () => {
             classSelect.style.cursor = "not-allowed";
         }
     }
+    // =========================
+    // 15. AUTO-FILL & DISABLE CLASS INPUT
+    // =========================
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+        const extraRows = document.getElementById('extra-rows');
+
+        if (extraRows.style.display === "none") {
+            extraRows.style.display = "table-row-group"; // This is the correct display for tbody
+            this.textContent = "Show Less";
+        } else {
+            extraRows.style.display = "none";
+            this.textContent = "Load More";
+        }
+    });
 });
