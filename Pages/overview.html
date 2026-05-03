@@ -19,56 +19,55 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="../index.html" style="text-decoration: none;">
-                <p>Fly<span>WithUs</span></p>
-            </a>
+        <div class="header-logo">
+            <p>Fly<span>WithUs</span></p>
         </div>
-        <nav>
-            <ul>
+
+        <nav class="navigation-menu">
+            <ul class="nav-list">
                 <li>
-                    <a href="../index.html">
+                    <a href="../index.html" class="nav-link ">
                         <i class="fa-solid fa-house"></i> Home
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/timetable.html">
+                    <a href="../Pages/timetable.html" class="nav-link ">
                         <i class="fa-solid fa-calendar-days"></i> Timetable
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/boarding.html">
+                    <a href="../Pages/boarding.html" class="nav-link">
                         <i class="fa-solid fa-ticket"></i> Booking
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/maps-Places.html">
+                    <a href="../Pages/maps-Places.html" class="nav-link ">
                         <i class="fa-solid fa-map-location-dot"></i> Maps
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/overview.html" class="active">
+                    <a href="../Pages/overview.html" class="nav-link active">
                         <i class="fa-solid fa-chart-line"></i> Overview
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/support-feedback.html">
+                    <a href="../Pages/support-feedback.html" class="nav-link">
                         <i class="fa-solid fa-circle-question"></i> Support
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+
+        <div class="header-buttons">
+            <button id="themeToggle" class="themeSwitcher" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
 
-            <!-- Ticket Button -->
-            <a href="../Pages/yourFlights.html" class="flight-btn">
-                <i class="fa-solid fa-ticket"></i> </a>
+            <a href="../Pages/yourFlights.html" class="ticket-btn">
+                <i class="fa-solid fa-ticket"></i>
+            </a>
 
-            <!-- Profile Button -->
-            <a href="../Pages/signIn.html" class="profile-btn">
+            <a href="../Pages/signIn.html" class="user-profile-btn">
                 <i class="fas fa-user-circle"></i>
                 <span>Profile</span>
             </a>
@@ -80,27 +79,27 @@
             <section class="fleet-section">
 
                 <h2 class="overview-subtitle">Meet Our Fleet</h2>
-                <div class="fleet-grid">
-                    <div class="fleet-card">
-                        <div class="fleet-img">
+                <div class="top-grid">
+                    <div class="top-card">
+                        <div class="top-img">
                             <img src="../Imgs/41.jpg" alt="Boeing 787">
-                            <span class="fleet-tag">Long Haul</span>
+
                         </div>
-                        <div class="fleet-info">
+                        <div class="top-info">
                             <h3>Boeing 787-9</h3>
                             <ul class="specs">
                                 <li><i class="fa-solid fa-users"></i> 290 Seats</li>
                                 <li><i class="fa-solid fa-route"></i> 14,140 km</li>
                             </ul>
-                            <p>The "Dreamliner" offers unparalleled comfort with advanced cabin pressure.</p>
+                            <p>The <b>Dreamliner</b> offers unparalleled comfort with advanced cabin pressure.</p>
                         </div>
                     </div>
-                    <div class="fleet-card">
-                        <div class="fleet-img">
+                    <div class="top-card">
+                        <div class="top-img">
                             <img src="../Imgs/42.jpg" alt="Airbus A350">
-                            <span class="fleet-tag">Ultra Luxury</span>
+
                         </div>
-                        <div class="fleet-info">
+                        <div class="top-info">
                             <h3>Airbus A350</h3>
                             <ul class="specs">
                                 <li><i class="fa-solid fa-users"></i> 350 Seats</li>
@@ -146,12 +145,14 @@
             </section>
         </div>
     </main>
-    <footer class="simple-footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Fly<span>WithUs</span></h3>
-                <p>Your trusted partner for seamless air travel across the globe.</p>
-                <div class="social-icons">
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Brand -->
+            <div class="footer-section">
+                <h3 class="footer-logo">Fly<span>WithUs</span></h3>
+                <p class="footer-description">Your trusted partner for seamless air travel across the globe.</p>
+                <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -159,9 +160,9 @@
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
+            <div class="footer-section">
+                <h4 class="section-title">Quick Links</h4>
+                <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/yourFlights.html">My Flights</a></li>
                     <li><a href="../Pages/timetable.html">Timetable</a></li>
@@ -170,29 +171,32 @@
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="../Pages/support-feedback.html ">Help Center</a></li>
-                    <li><a href="../Pages/support-feedback.html ">Feedback</a></li>
-                    <li><a href="../Pages/support-feedback.html  ">FAQ</a></li>
-                    <li><a href=" ../Pages/support-feedback.html ">Contact</a></li>
+
+            <div class="footer-section">
+                <h4 class="section-title">Support</h4>
+                <ul class="nav-links">
+                    <li><a href="../Pages/support-feedback.html">Help Center</a></li>
+                    <li><a href="../Pages/support-feedback.html">Feedback</a></li>
+                    <li><a href="../Pages/support-feedback.html">FAQ</a></li>
+                    <li><a href="../Pages/support-feedback.html">Contact</a></li>
                 </ul>
             </div>
 
-            <div class="footer-col ">
-                <h4>Contact</h4>
-                <ul class="contact-list ">
-                    <li><i class="fas fa-phone "></i> +20 133 044 0455</li>
-                    <li><i class="fas fa-envelope "></i> support@flywithus.com.eg</li>
-                    <li><i class="fas fa-map-marker-alt "></i> DownTown, Cairo</li>
-                    <li><i class="fas fa-map-marker-alt "></i> Borg El Arab, Alexandria</li>
-                    <li><i class="fas fa-map-marker-alt "></i> Hurghada Hub, Red Sea</li>
+            <div class="footer-section">
+                <h4 class="section-title">Contact</h4>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone"></i> +20 133 044 0455</li>
+                    <li><i class="fas fa-envelope"></i> support@flywithus.com.eg</li>
+                    <li><i class="fas fa-map-marker-alt"></i> DownTown, Cairo</li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> Borg El Arab, Alexandria
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Hurghada Hub, Red Sea</li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom ">
+        <div class="footer-copyright">
             <p>&copy; 2025 FlyWithUs. All rights reserved.</p>
         </div>
     </footer>

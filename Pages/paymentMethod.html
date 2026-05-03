@@ -19,61 +19,60 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="../index.html" style="text-decoration: none">
-                <p>Fly<span>WithUs</span></p>
-            </a>
+        <div class="header-logo">
+            <p>Fly<span>WithUs</span></p>
         </div>
-        <nav>
-            <ul>
+
+        <nav class="navigation-menu">
+            <ul class="nav-list">
                 <li>
-                    <a href="../index.html"> <i class="fa-solid fa-house"></i> Home </a>
+                    <a href="../index.html" class="nav-link ">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
                 </li>
                 <li>
-                    <a href="../Pages/timetable.html">
+                    <a href="../Pages/timetable.html" class="nav-link ">
                         <i class="fa-solid fa-calendar-days"></i> Timetable
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/boarding.html">
+                    <a href="../Pages/boarding.html" class="nav-link">
                         <i class="fa-solid fa-ticket"></i> Booking
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/maps-Places.html">
+                    <a href="../Pages/maps-Places.html" class="nav-link ">
                         <i class="fa-solid fa-map-location-dot"></i> Maps
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/overview.html">
+                    <a href="../Pages/overview.html" class="nav-link">
                         <i class="fa-solid fa-chart-line"></i> Overview
                     </a>
                 </li>
                 <li>
-                    <a href="../Pages/support-feedback.html">
+                    <a href="../Pages/support-feedback.html" class="nav-link">
                         <i class="fa-solid fa-circle-question"></i> Support
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
-        </button>
 
-            <!-- Ticket Button -->
-            <a href="../Pages/yourFlights.html" class="flight-btn">
+        <div class="header-buttons">
+            <button id="themeToggle" class="themeSwitcher" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <a href="../Pages/yourFlights.html" class="ticket-btn">
                 <i class="fa-solid fa-ticket"></i>
             </a>
 
-            <!-- Profile Button -->
-            <a href="../Pages/signIn.html" class="profile-btn">
+            <a href="../Pages/signIn.html" class="user-profile-btn">
                 <i class="fas fa-user-circle"></i>
                 <span>Profile</span>
             </a>
         </div>
     </header>
-    <!-- Booking Form -->
     <div class="Booking">
         <form class="Book">
             <h1>Book Your Flight</h1>
@@ -85,8 +84,6 @@
                 <input type="radio" name="TripType" id="OneWay" checked required />
                 <label for="RoundTrip">Round Trip</label>
                 <input type="radio" name="TripType" id="RoundTrip" />
-                <label for="MultiCity">Multi City</label>
-                <input type="radio" name="TripType" id="MultiCity" />
             </div>
 
             <div class="block">
@@ -215,12 +212,14 @@
             <button type="submit" id="bookingForm" class="btn-confirm">Confirm Booking</button>
         </form>
     </div>
-    <footer class="simple-footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Fly<span>WithUs</span></h3>
-                <p>Your trusted partner for seamless air travel across the globe.</p>
-                <div class="social-icons">
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Brand -->
+            <div class="footer-section">
+                <h3 class="footer-logo">Fly<span>WithUs</span></h3>
+                <p class="footer-description">Your trusted partner for seamless air travel across the globe.</p>
+                <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -228,9 +227,9 @@
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
+            <div class="footer-section">
+                <h4 class="section-title">Quick Links</h4>
+                <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/yourFlights.html">My Flights</a></li>
                     <li><a href="../Pages/timetable.html">Timetable</a></li>
@@ -239,19 +238,20 @@
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="../Pages/support-feedback.html ">Help Center</a></li>
-                    <li><a href="../Pages/support-feedback.html ">Feedback</a></li>
-                    <li><a href="../Pages/support-feedback.html  ">FAQ</a></li>
-                    <li><a href=" ../Pages/support-feedback.html ">Contact</a></li>
+
+            <div class="footer-section">
+                <h4 class="section-title">Support</h4>
+                <ul class="nav-links">
+                    <li><a href="../Pages/support-feedback.html">Help Center</a></li>
+                    <li><a href="../Pages/support-feedback.html">Feedback</a></li>
+                    <li><a href="../Pages/support-feedback.html">FAQ</a></li>
+                    <li><a href="../Pages/support-feedback.html">Contact</a></li>
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="contact-list">
+            <div class="footer-section">
+                <h4 class="section-title">Contact</h4>
+                <ul class="contact-details">
                     <li><i class="fas fa-phone"></i> +20 133 044 0455</li>
                     <li><i class="fas fa-envelope"></i> support@flywithus.com.eg</li>
                     <li><i class="fas fa-map-marker-alt"></i> DownTown, Cairo</li>
@@ -263,7 +263,7 @@
             </div>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-copyright">
             <p>&copy; 2025 FlyWithUs. All rights reserved.</p>
         </div>
     </footer>

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
     // 4. THEME SWITCHER
     // =========================
-    const themeBtn = document.querySelector(".theme-btn");
+    const themeBtn = document.querySelector(".themeSwitcher");
     const themeLink = document.querySelector("#theme-style");
     const icon = themeBtn ? themeBtn.querySelector("i") : null;
 
