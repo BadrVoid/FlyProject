@@ -75,18 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const password = document.getElementById("password").value.trim();
 
             /*
-                  ^ → start of string
-                  [^\s@]+ → any characters except space or @ (username)
-                  @ → must contain @
-                  [^\s@]+ → domain name
-                  \. → dot (.)
-                  [^\s@]+ → extension (com, net, etc)
-                  $ → end of string 
-                  {6,} → at least 6 characters
-
-                  emailRegex.test("test@gmail.com") => true
-                  emailRegex.test("bad email")    => false
+                    ^ → start of string
+                    [^\s@]+ → any characters except space or @ (username)
+                    @ → must contain @
+                    [^\s@]+ → domain name
+                    \. → dot (.)
+                    [^\s@]+ → extension (com, net, etc)
+                    $ → end of string 
+                    {6,} → at least 6 characters
+            
+                    emailRegex.test("test@gmail.com") => true
+                    emailRegex.test("bad email")    => false
                   */
+
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             const passwordRegex = /^.{6,}$/; // min 6 chars
 
@@ -268,18 +269,15 @@ document.addEventListener("DOMContentLoaded", () => {
         bookingForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // Get values from your IDs
             const fromVal = document.getElementById("From").value;
             const toVal = document.getElementById("TO").value;
             const dateVal = document.getElementById("Date").value;
-            // NEW: Get the Ticket Class value
             const classVal = document.getElementById("Class").value;
             const passenger =
                 document.getElementById("First").value +
                 " " +
                 document.getElementById("Last").value;
 
-            // Store as simple strings
             localStorage.setItem("booked_From", fromVal);
             localStorage.setItem("booked_To", toVal);
             localStorage.setItem("booked_Date", dateVal);
@@ -313,6 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>12:00 PM</td>
                     <td>C1</td>      
                     <td>${classVal}</td>
+                    
                 </tr>
             `;
 
@@ -369,10 +368,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     method.addEventListener("change", togglePayment);
     togglePayment();
-
-
-
-
 });
 // =========================
 // 18. Nav Change
