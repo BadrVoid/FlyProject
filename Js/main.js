@@ -374,25 +374,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+// =========================
+// 18. Nav Change
+// =========================
+const header = document.querySelector('header');
+
+function toggleNavigationMode() {
+    const isSidebar = header.classList.toggle('sidebar');
+    document.body.classList.toggle('has-sidebar');
+
+    localStorage.setItem('nav-mode', isSidebar ? 'sidebar' : 'navbar');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const layoutBtn = document.getElementById('layoutToggle');
-    const ticketGrid = document.querySelector('.ticket-grid');
+    const savedMode = localStorage.getItem('nav-mode');
 
-    // Check for saved preference
-    const currentLayout = localStorage.getItem('preferred-layout');
-    if (currentLayout === 'list') {
-        ticketGrid.classList.add('list-view');
+    if (savedMode === 'sidebar') {
+        header.classList.add('sidebar');
+        document.body.classList.add('has-sidebar');
     }
 
-    layoutBtn.addEventListener('click', () => {
-        ticketGrid.classList.toggle('list-view');
-
-        // Save preference
-        if (ticketGrid.classList.contains('list-view')) {
-            localStorage.setItem('preferred-layout', 'list');
-        } else {
-            localStorage.setItem('preferred-layout', 'grid');
-        }
-    });
+    const changeNavBtn = document.querySelector('.user-profile-btn');
+    if (changeNavBtn) {
+        changeNavBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleNavigationMode();
+        });
+    }
 });

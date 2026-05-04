@@ -141,6 +141,7 @@ header {
     transition: all var(--transition);
 }
 
+.ticket-btn span,
 .user-profile-btn span {
     opacity: 0;
     transform: translateX(-8px);
@@ -166,9 +167,72 @@ header {
     padding: 8px 12px;
 }
 
+.ticket-btn:hover {
+    width: 125px;
+    padding: 8px 12px;
+}
+
+.ticket-btn:hover span,
 .user-profile-btn:hover span {
     opacity: 1;
     transform: translateX(0);
+}
+
+header.sidebar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 40px 20px;
+}
+
+header.sidebar .nav-list {
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+    gap: 15px;
+}
+
+header.sidebar .header-buttons {
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%;
+    align-items: flex-start;
+}
+
+header.sidebar .ticket-btn,
+header.sidebar .user-profile-btn {
+    width: 100%;
+    border-radius: 12px;
+    justify-content: flex-start;
+}
+
+header.sidebar .ticket-btn span,
+header.sidebar .user-profile-btn span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+body.has-sidebar {
+    padding-left: 260px;
+    transition: padding var(--transition);
+}
+
+header.sidebar .nav-link::after {
+    bottom: 0;
+    left: -20px;
+    width: 4px;
+    height: 0;
+}
+
+header.sidebar .nav-link:hover::after,
+header.sidebar .nav-link.active::after {
+    height: 100%;
+    width: 4px;
 }
 
 
