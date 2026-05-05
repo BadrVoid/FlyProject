@@ -1773,27 +1773,12 @@ td {
     gap: 5px;
 }
 
-.Book label,
-.Book input {
-    display: inline-block;
-    margin-right: 6px;
-    vertical-align: middle;
-    margin-top: -10px;
-}
-
-.Book input {
-    margin-top: -55px;
-}
-
 .Book label {
     font-size: 12px;
     font-weight: bold;
     color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-right: 15px;
-    margin-left: 0px;
-    padding-left: 0px;
 }
 
 .Book input,
