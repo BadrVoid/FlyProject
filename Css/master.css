@@ -1780,7 +1780,6 @@ td {
 
 .btn-confirm:hover {
     background-color: var(--color-secondary);
-    /* Lighter Blue */
     color: var(--text-on-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-soft);
