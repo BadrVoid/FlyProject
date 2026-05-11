@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            const btn = signInForm.querySelector(".btn-signin");
+            const btn = signInForm.querySelector(".signIn-btn");
             btn.innerText = "Connecting...";
             btn.style.opacity = "0.7";
 

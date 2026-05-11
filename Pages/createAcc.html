@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="../Css/bootstrap.css">
     <link rel="stylesheet" href="../Css/fonts.css">
     <link rel="stylesheet" href="../Css/master.css">
-
     <link rel="stylesheet" href="../Css/Themes/lightTheme.css" id="theme-style">
-
     <link rel="icon" href="../Imgs/33.jpg" type="image/jpeg">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -79,48 +76,51 @@
             </a>
         </div>
     </header>
-    <main class="signin-container">
-        <div class="signin-card">
-            <div class="signin-header">
+    <main class="form-screen">
+        <div class="form-card">
+            <div class="form-header">
                 <h2>Join FlyWithUs</h2>
                 <p>Create your account to start earning miles</p>
             </div>
 
             <form action="#" class="signup-form">
-                <div class="input-group-custom">
+                <div class="input-group">
                     <label for="fullname">Full Name</label>
-                    <div class="input-wrapper">
+                    <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" id="fullname" placeholder="John Doe" required>
                     </div>
                 </div>
 
-                <div class="input-group-custom">
+                <div class="input-group">
                     <label for="email">Email Address</label>
-                    <div class="input-wrapper">
+                    <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" id="email" placeholder="example@flywithus.com" required>
                     </div>
                 </div>
 
-                <div class="input-group-custom">
+                <div class="input-group">
                     <label for="password">Create Password</label>
-                    <div class="input-wrapper">
+                    <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="password" placeholder="••••••••" required>
                     </div>
                 </div>
 
-                <div class="form-options">
-                    <label class="remember-me">
-                    <input type="checkbox" required> I agree to the <a href="#" class="forgot-pass">Terms & Conditions</a>
+                <div class="form-bot">
+                    <label class="checkbox-container">
+                    <input type="checkbox" required> 
+                    I agree to the <a href="#" class="form-link">Terms & Conditions</a>
                 </label>
                 </div>
 
-                <button type="submit" class="btn-signin" id="createAccBtn">Create Account</button>
+                <button type="submit" class="create-btn" id="createAccBtn">
+                Create Account
+            </button>
             </form>
 
-            <div class="signin-footer">
+            <div class="form-footer">
                 <p>Already have an account? <a href="../Pages/signIn.html">Sign In</a></p>
             </div>
         </div>
@@ -128,7 +128,6 @@
 
     <footer class="site-footer">
         <div class="footer-container">
-            <!-- Brand -->
             <div class="footer-section">
                 <h3 class="footer-logo">Fly<span>WithUs</span></h3>
                 <p class="footer-description">Your trusted partner for seamless air travel across the globe.</p>

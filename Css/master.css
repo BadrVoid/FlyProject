@@ -1133,6 +1133,10 @@ header.sidebar .nav-link.active::after {
     border-color: var(--color-accent);
 }
 
+.supterm {
+    color: white;
+}
+
 .send-btn {
     width: 100%;
     padding: 14px;
@@ -1390,7 +1394,13 @@ header.sidebar .nav-link.active::after {
     font-size: 1.3rem;
 }
 
-.signin-container {
+
+/* SignIn Style */
+
+
+/* The main full-page background */
+
+.form-screen {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -1399,7 +1409,10 @@ header.sidebar .nav-link.active::after {
     min-height: 100vh;
 }
 
-.signin-card {
+
+/* The glassmorphism card itself */
+
+.form-card {
     animation: fadeup 1s ease;
     margin-left: 60px;
     background: rgba(255, 255, 255, 0.08);
@@ -1414,50 +1427,60 @@ header.sidebar .nav-link.active::after {
     transition: all 0.3s ease-in-out;
 }
 
-.feedback-form:hover,
-.signin-card:hover {
+.form-card:hover {
     backdrop-filter: blur(50px);
 }
 
-.signin-header h2 {
+
+/* Title and description section */
+
+.form-header h2 {
     font-family: "Barlow Condensed", sans-serif;
     font-size: 2.8rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
-.signin-header p {
+.form-header p {
     font-size: 0.9rem;
     color: var(--text-on-dark);
     margin-bottom: 30px;
 }
 
-.input-group-custom {
+
+/* A single block: Label + Input wrapper */
+
+.input-group {
     text-align: left;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Forces label to stay ABOVE the input */
 }
 
-.input-group-custom label {
-    display: block;
+.input-group label {
     font-size: 0.85rem;
     margin-bottom: 8px;
     color: var(--text-on-dark);
     opacity: 0.9;
 }
 
-.input-wrapper {
+
+/* The container for the icon and the text field */
+
+.input-field {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.input-wrapper i {
+.input-field i {
     position: absolute;
     left: 15px;
     color: var(--text-muted);
 }
 
-.input-wrapper input {
+.input-field input {
     width: 100%;
     padding: 12px 15px 12px 45px;
     background: rgba(255, 255, 255, 0.05);
@@ -1468,12 +1491,12 @@ header.sidebar .nav-link.active::after {
     transition: var(--transition);
 }
 
-.input-wrapper input:focus {
+.input-field input:focus {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--color-accent);
 }
 
-.form-options {
+.form-bot {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1481,20 +1504,21 @@ header.sidebar .nav-link.active::after {
     margin-bottom: 30px;
 }
 
-.remember-me {
+.checkbox-container {
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 }
 
-.forgot-pass {
+.form-link {
     color: var(--color-accent);
     text-decoration: none;
     font-weight: 500;
 }
 
-.btn-signin {
+.create-btn,
+.signIn-btn {
     width: 100%;
     padding: 14px;
     border: none;
@@ -1507,26 +1531,27 @@ header.sidebar .nav-link.active::after {
     transition: var(--transition);
 }
 
-.btn-signin:hover {
+.create-btn:hover,
+.signIn-btn:hover {
     background-color: #3694bc;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.signin-footer {
+.form-footer {
     margin-top: 25px;
     font-size: 0.9rem;
     color: var(--text-muted);
 }
 
-.signin-footer a {
+.form-footer a {
     color: var(--text-on-dark);
     font-weight: bold;
     text-decoration: none;
     margin-left: 5px;
 }
 
-.signin-footer a:hover {
+.form-footer a:hover {
     color: var(--color-accent);
 }
 
