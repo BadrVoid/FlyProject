@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "../Pages/signIn.html";
         return;
     }
-
+    if (currentPage.includes("yourFlights.html") && isSigned !== "true") {
+        window.location.href = "../Pages/signIn.html";
+        return;
+    }
     // =========================
     // 4. THEME SWITCHER
     // =========================
@@ -262,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =========================
-    // 13. FLIGHT BOOKING SUBMISSION (Updated)
+    // 13. FLIGHT BOOKING SUBMISSION 
     // =========================
     const bookingForm = document.querySelector(".Book");
     if (bookingForm) {
@@ -337,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     // =========================
-    // 16. LOAD MORE BUTTON & PAYMENT METHOD TOGGLE
+    // 16. LOAD MORE BUTTON 
     // =========================
     document.getElementById('loadMoreBtn').addEventListener('click', function() {
         const extraRows = document.getElementById('extra-rows');
@@ -389,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('has-sidebar');
     }
 
-    const changeNavBtn = document.querySelector('.user-profile-btn');
+    const changeNavBtn = document.querySelector('#layoutToggle');
     if (changeNavBtn) {
         changeNavBtn.addEventListener('click', (e) => {
             e.preventDefault();
