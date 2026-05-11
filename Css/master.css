@@ -875,6 +875,14 @@ header.sidebar .nav-link.active::after {
     /* align-items: stretch; By default */
 }
 
+.top-card:nth-child(1) {
+    animation: fadeup 0.6s ease-out forwards;
+}
+
+.top-card:nth-child(2) {
+    animation: fadedown 0.6s ease-in forwards;
+}
+
 .top-card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
