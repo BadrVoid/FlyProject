@@ -902,16 +902,13 @@ header.sidebar .nav-link.active::after {
 
 .top-info {
     max-height: 0;
-    overflow: hidden;
     padding: 0 25px;
-    opacity: 0;
     transition: all 0.7s ease-in-out;
 }
 
 .top-card:hover .top-info {
     max-height: 300px;
     padding: 25px;
-    opacity: 1;
 }
 
 .top-info h3,
