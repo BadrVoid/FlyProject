@@ -309,6 +309,7 @@ header.sidebar .nav-link.active::after {
 
 .home-btn:hover {
     background-color: var(--color-surface);
+    color: var(--text-on-inv);
     transform: scale(1.08);
 }
 
@@ -794,7 +795,6 @@ header.sidebar .nav-link.active::after {
 }
 
 .airport-card:hover {
-    transform: scale(1.02);
     min-height: 155px;
 }
 
